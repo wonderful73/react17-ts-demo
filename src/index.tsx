@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import adapter from "screen-adapter";
+
+adapter(750);
 
 ReactDOM.render(
   <React.StrictMode>
