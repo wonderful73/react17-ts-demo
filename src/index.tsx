@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Index from './pages/Index/App';
+import Detail from './pages/Detail/App';
 import reportWebVitals from './reportWebVitals';
 import adapter from "screen-adapter";
+import { BrowserRouter, Switch, Route, } from "react-router-dom";
 
 adapter(750);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" >
+          <Index />
+        </Route>
+        <Route exact path="/detail" >
+          <Detail />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
