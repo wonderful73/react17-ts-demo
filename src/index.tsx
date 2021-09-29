@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Index from './pages/Index/App';
-import Detail from './pages/Detail/App';
+import Index from './pages/Home';
+import Detail from './pages/Detail';
 import reportWebVitals from './reportWebVitals';
 import adapter from "screen-adapter";
 import { BrowserRouter, Switch, Route, } from "react-router-dom";
