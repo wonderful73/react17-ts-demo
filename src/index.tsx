@@ -1,26 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
 import './index.scss';
 import Index from './pages/Home';
 import Detail from './pages/Detail';
 import reportWebVitals from './reportWebVitals';
 import adapter from "screen-adapter";
 import { BrowserRouter, Switch, Route, } from "react-router-dom";
+import store from "./store";
 
 adapter(750);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" >
-          <Index />
-        </Route>
-        <Route exact path="/detail" >
-          <Detail />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" >
+            <Index />
+          </Route>
+          <Route exact path="/detail" >
+            <Detail />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
