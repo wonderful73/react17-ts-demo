@@ -8,7 +8,7 @@ const reducer = combineReducers({
 
 const enhancer = process.env.NODE_ENV === 'development' ? composeWithDevTools(
   applyMiddleware(ReduxThunk)
-) :applyMiddleware(ReduxThunk)
+) : applyMiddleware(ReduxThunk)
 
 const store = createStore(reducer, enhancer)
 
